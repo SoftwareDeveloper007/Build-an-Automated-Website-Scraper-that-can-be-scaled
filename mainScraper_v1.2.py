@@ -11,7 +11,7 @@ def takeFirst(elem):
     return elem[0]
 
 class mainScraper():
-    def __init__(self, id = 'martin.neumann2345@mail.com', pw='passion1989'):
+    def __init__(self, id = 'Your Email Address', pw='Your Password'):
         self.id = id
         self.pw = pw
         self.input_data = []
