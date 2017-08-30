@@ -11,20 +11,19 @@ def takeFirst(elem):
     return elem[0]
 
 class mainScraper():
-    def __init__(self, id = 'Your Email Address', pw='Your Password'):
+    def __init__(self, id = 'martin.neumann2345@mail.com', pw='passion1989'):
         self.id = id
         self.pw = pw
         self.input_data = []
         self.output_data = []
         self.start_url = 'https://www.yelp.com/login'
         self.drivers = []
-        self.cnt = 0
 
     def startScraping(self):
         self.inputFile()
 
         self.threads = []
-        self.max_threads = 3
+        self.max_threads = 1
 
         for i in range(self.max_threads):
             self.drivers.append(None)
@@ -190,11 +189,9 @@ class mainScraper():
         except:
             logTxt = logTxt + "\tCan't find details\n"
 
-        self.cnt += 1
         logTxt = logTxt + "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" + \
                  "\tYelp Name: {0}\n\tYelp URL: {1}\n\tYelp Reviews: {2}\n\tYelp Friends: {3}\n\tYelp City: {4}\n" \
-                 "\tYelp Elite: {5}\n\n\tTotal Scraped: {6}\n".\
-                     format(yelp_name, yelp_url, yelp_reviews, yelp_friends, yelp_city, yelp_elite, self.cnt)
+                 "\tYelp Elite: {5}\n".format(yelp_name, yelp_url, yelp_reviews, yelp_friends, yelp_city, yelp_elite)
         print(logTxt)
 
         self.output_data.append([index, email, yelp_name, yelp_url, yelp_reviews, yelp_friends, yelp_city, yelp_elite])

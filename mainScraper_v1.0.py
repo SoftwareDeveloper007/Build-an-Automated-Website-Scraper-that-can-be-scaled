@@ -10,7 +10,7 @@ import threading, time, csv, os, sys
 SLEEP_TIME = 0.5
 
 class mainScraper():
-    def __init__(self, id = 'Your Email Address', pw='Your Password'):
+    def __init__(self, id = 'martin.neumann2345@mail.com', pw='passion1989'):
         self.input_data = []
         self.output_data = []
         self.start_url = 'https://www.yelp.com/'

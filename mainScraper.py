@@ -90,9 +90,9 @@ class mainScraper():
                 password =driver.find_element_by_css_selector('form#ajax-login > input#password')
                 submit_btn = driver.find_element_by_css_selector('form#ajax-login > button.submit')
 
-                login.send_keys('Your Email Address')
+                login.send_keys("martin.neumann2345@mail.com")
                 time.sleep(5)
-                password.send_keys('Your Password')
+                password.send_keys("passion1989")
                 time.sleep(5)
                 submit_btn.click()
                 logTxt = logTxt + '\tLogin Successfully!\n'
